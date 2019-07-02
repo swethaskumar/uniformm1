@@ -6,7 +6,6 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -17,13 +16,13 @@ import com.training.pom.LoginPOM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 
-public class UFM_008 {
-	
-	
+public class UFM_009 {
+  
 	private WebDriver driver;
 	private String baseUrl;
 	private LoginPOM loginPOM;
 	private MainPagePOM mainPagePOM; 
+	private ViewCartPOM viewCartPOM;
 	private static Properties properties;
 	private ScreenShot screenShot;
 
@@ -38,7 +37,8 @@ public class UFM_008 {
 	public void setUp() throws Exception {
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
 		loginPOM = new LoginPOM(driver); 
-		mainPagePOM = new MainPagePOM(driver); 
+		mainPagePOM = new MainPagePOM(driver);
+		viewCartPOM= new ViewCartPOM(driver);
 		baseUrl = properties.getProperty("baseURL");
 		screenShot = new ScreenShot(driver); 
 		// open the browser 
@@ -52,20 +52,25 @@ public class UFM_008 {
 	}
 	@Test
 	public void validAddProducts() throws InterruptedException {
-		mainPagePOM.clickShopUniforms();
+		viewCartPOM.clickShopUniforms();
 		Thread.sleep(2000);
-		mainPagePOM.clickTshirt();
+		viewCartPOM.clickTshirt();
 		Thread.sleep(2000);
-		mainPagePOM.selectDropDown1();
+		viewCartPOM.selectDropDown1();
 		Thread.sleep(2000);
-		mainPagePOM.clickAddCart();
+		viewCartPOM.clickAddCart();
 		Thread.sleep(2000);
-		mainPagePOM.clickViewCart();
+		viewCartPOM.clickViewCart();
 		Thread.sleep(2000);
-		mainPagePOM.clickViewCart1();
+		viewCartPOM.clickViewCart1();
+		Thread.sleep(2000);
+		viewCartPOM.clickRemove();
 		//screenShot.captureScreenShot("First");
 		
-		
+		String Expected = "Your shopping cart is empty!";
+		String Actual = viewCartPOM.validMsg();
+		Assert.assertTrue(Actual.contains(Expected));
 		
 	}
+	
 }

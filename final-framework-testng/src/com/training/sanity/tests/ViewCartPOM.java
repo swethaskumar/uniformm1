@@ -7,11 +7,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-public class MainPagePOM {
-
+public class ViewCartPOM {
 private WebDriver driver; 
 	
-	public MainPagePOM(WebDriver driver) {
+	public ViewCartPOM(WebDriver driver) {
 		this.driver = driver; 
 		PageFactory.initElements(driver, this);
 	}
@@ -73,6 +72,23 @@ private WebDriver driver;
 			//this.viewCart1.click();
 			
 		}
-		
+
+	@FindBy(xpath="//button[@class='btn btn-danger']")
+	private WebElement removeTshirt;
+
+		public void clickRemove() {
+				
+			this.removeTshirt.click();
 			
+			}	
+			
+		
+	@FindBy(xpath="(//div//p[text()='Your shopping cart is empty!'])[2]")
+	private WebElement verifyMsg;
+		
+		public String validMsg() {
+			
+			return this.verifyMsg.getText();
+		
+		} 
 }

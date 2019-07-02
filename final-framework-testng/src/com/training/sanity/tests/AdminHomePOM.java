@@ -45,6 +45,14 @@ public class AdminHomePOM {
 		this.continueBtn.click();
 	}
 	
+	@FindBy(xpath="//div[@class='text-danger']")
+	private WebElement verifyError;
+	
+	public String validErrorMsg() {
+		
+		return this.verifyError.getText();
+	
+	} 
 	
 }
 

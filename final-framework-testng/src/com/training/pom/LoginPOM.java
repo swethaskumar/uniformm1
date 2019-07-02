@@ -28,6 +28,9 @@ public class LoginPOM {
 	@FindBy(xpath="//input[@class='btn btn-primary']")
 	private WebElement loginBtn; 
 	
+	
+
+	
 	public void clickDropDwon() {
 		this.dropDown.click();
 	}
@@ -49,4 +52,8 @@ public class LoginPOM {
 	public void clickLoginBtn() {
 		this.loginBtn.click(); 
 	}
+	
+	
+
+
 }

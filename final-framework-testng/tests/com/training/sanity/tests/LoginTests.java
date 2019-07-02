@@ -53,5 +53,7 @@ public class LoginTests {
 		loginPOM.sendPassword("Neha123");
 		loginPOM.clickLoginBtn(); 
 		//screenShot.captureScreenShot("First");
+		
+		
 	}
 }

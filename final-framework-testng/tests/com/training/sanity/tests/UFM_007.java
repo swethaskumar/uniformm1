@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -71,6 +72,10 @@ public class UFM_007 {
 		Thread.sleep(2000);
 		adminHomePOM.clickContinueBtn(); 
 		//screenShot.captureScreenShot("First");
+		String Expected = "Password confirmation does not match password!";
+		String Actual = adminHomePOM.validErrorMsg();
+		Assert.assertTrue(Actual.contains(Expected));
+		
 	}
 	
 }
