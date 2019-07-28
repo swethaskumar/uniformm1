@@ -1,29 +1,208 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" ignored="0" total="6" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="15649" started-at="2019-07-08T14:47:35Z" finished-at="2019-07-08T14:47:51Z">
+  <suite name="Default suite" duration-ms="22079" started-at="2019-07-28T17:54:32Z" finished-at="2019-07-28T17:54:54Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="15649" started-at="2019-07-08T14:47:35Z" finished-at="2019-07-08T14:47:51Z">
-      <class name="com.training.sanity.tests.UNF_039">
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.UNF_039@68c4039c]" name="setUpBeforeClass" is-config="true" duration-ms="12" started-at="2019-07-08T14:47:35Z" finished-at="2019-07-08T14:47:35Z">
+    <test name="Default test" duration-ms="22079" started-at="2019-07-28T17:54:32Z" finished-at="2019-07-28T17:54:54Z">
+      <class name="com.training.sanity.tests.UNF_085">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.UNF_085@68c4039c]" name="setUpBeforeClass" is-config="true" duration-ms="8726" started-at="2019-07-28T17:54:32Z" finished-at="2019-07-28T17:54:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.UNF_039@68c4039c]" name="setUp" is-config="true" duration-ms="4463" started-at="2019-07-08T14:47:35Z" finished-at="2019-07-08T14:47:40Z">
+        <test-method status="PASS" signature="login()[pri:0, instance:com.training.sanity.tests.UNF_085@68c4039c]" name="login" duration-ms="3296" started-at="2019-07-28T17:54:41Z" finished-at="2019-07-28T17:54:44Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validLoginTest()[pri:0, instance:com.training.sanity.tests.UNF_039@68c4039c]" name="validLoginTest" duration-ms="4287" started-at="2019-07-08T14:47:40Z" finished-at="2019-07-08T14:47:44Z">
+        </test-method> <!-- login -->
+        <test-method status="FAIL" signature="loginDBTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.training.sanity.tests.UNF_085@68c4039c]" name="loginDBTest" duration-ms="8823" started-at="2019-07-28T17:54:44Z" data-provider="excel-inputs2" finished-at="2019-07-28T17:54:53Z">
+          <exception class="org.testng.internal.reflect.MethodMatcherException">
+            <message>
+              <![CDATA[
+Data provider mismatch
+Method: loginDBTest([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=2, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=3, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=4, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=5, type=java.lang.String, declaredAnnotations=[]}])
+Arguments: [null,null,null,null,null,null,null,null]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.internal.reflect.MethodMatcherException: 
+Data provider mismatch
+Method: loginDBTest([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=2, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=3, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=4, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=5, type=java.lang.String, declaredAnnotations=[]}])
+Arguments: [null,null,null,null,null,null,null,null]
+at org.testng.internal.reflect.DataProviderMethodMatcher.getConformingArguments(DataProviderMethodMatcher.java:45)
+at org.testng.internal.Parameters.injectParameters(Parameters.java:796)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:983)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.internal.reflect.MethodMatcherException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validLoginTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.UNF_039@68c4039c]" name="tearDown" is-config="true" duration-ms="6864" started-at="2019-07-08T14:47:44Z" finished-at="2019-07-08T14:47:51Z">
+        </test-method> <!-- loginDBTest -->
+        <test-method status="PASS" signature="loginDBTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.training.sanity.tests.UNF_085@68c4039c]" name="loginDBTest" duration-ms="2560" started-at="2019-07-28T17:54:45Z" data-provider="excel-inputs2" finished-at="2019-07-28T17:54:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[49.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Pending]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[05/7/2019]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Sudheer Kumar]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[567.0]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[05/7/2019]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginDBTest -->
+        <test-method status="PASS" signature="loginDBTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.training.sanity.tests.UNF_085@68c4039c]" name="loginDBTest" duration-ms="1727" started-at="2019-07-28T17:54:48Z" data-provider="excel-inputs2" finished-at="2019-07-28T17:54:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[48.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Pending]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[09/7/2019]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Sudheer Kumar]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[452.0]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[09/7/2019]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginDBTest -->
+        <test-method status="PASS" signature="loginDBTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.training.sanity.tests.UNF_085@68c4039c]" name="loginDBTest" duration-ms="1757" started-at="2019-07-28T17:54:49Z" data-provider="excel-inputs2" finished-at="2019-07-28T17:54:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[45.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Pending]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[05/7/2019]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Neha Jain]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[567.0]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[05/7/2019]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginDBTest -->
+        <test-method status="PASS" signature="loginDBTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.training.sanity.tests.UNF_085@68c4039c]" name="loginDBTest" duration-ms="1548" started-at="2019-07-28T17:54:51Z" data-provider="excel-inputs2" finished-at="2019-07-28T17:54:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[44.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Pending]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[05/7/2019]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Neha Jain]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[567.0]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[05/7/2019]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginDBTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.UNF_085@68c4039c]" name="tearDown" is-config="true" duration-ms="1188" started-at="2019-07-28T17:54:53Z" finished-at="2019-07-28T17:54:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.training.sanity.tests.UNF_039 -->
+      </class> <!-- com.training.sanity.tests.UNF_085 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

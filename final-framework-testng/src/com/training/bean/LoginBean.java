@@ -1,37 +1,70 @@
 package com.training.bean;
 
 public class LoginBean {
-	private String userName;
-	private String password;
+	private String productnametest;
+	private String pricetest;
+	private String statustest;
+	private String modeltest;
+	private String quantitytest;
 
 	public LoginBean() {
 	}
 
-	public LoginBean(String userName, String password) {
+	public LoginBean(String productnametest, String pricetest,String statustest,String modeltest, String quantitytest) {
 		super();
-		this.userName = userName;
-		this.password = password;
+		this.setProductnametest(productnametest);
+		this.setPricetest(pricetest);
+		this.setStatustest(statustest);
+		this.setModeltest(modeltest);
+		this.setQuantitytest(quantitytest);
+		
 	}
 
-	public String getUserName() {
-		return userName;
+	
+	public String getProductnametest() {
+		return productnametest;
 	}
 
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setProductnametest(String productnametest) {
+		this.productnametest = productnametest;
 	}
 
-	public String getPassword() {
-		return password;
+	public String getPricetest() {
+		return pricetest;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public void setPricetest(String pricetest) {
+		this.pricetest = pricetest;
+	}
+
+	public String getStatustest() {
+		return statustest;
+	}
+
+	public void setStatustest(String statustest) {
+		this.statustest = statustest;
+	}
+
+	public String getModeltest() {
+		return modeltest;
+	}
+
+	public void setModeltest(String modeltest) {
+		this.modeltest = modeltest;
+	}
+
+	public String getQuantitytest() {
+		return quantitytest;
+	}
+
+	public void setQuantitytest(String quantitytest) {
+		this.quantitytest = quantitytest;
 	}
 
 	@Override
 	public String toString() {
-		return "LoginBean [userName=" + userName + ", password=" + password + "]";
+		return "LoginBean [productName =" + productnametest + ", price =" + pricetest + ", status =" +statustest +" , model ="+ modeltest +", qunatity = "+ quantitytest +" ]";
 	}
+
 
 }
